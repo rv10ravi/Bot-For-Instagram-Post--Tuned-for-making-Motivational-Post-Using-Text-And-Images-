@@ -27,31 +27,32 @@ Ensure you have Python 3.8+ installed. Required libraries:
 Install dependencies:
 pip install -r requirements.txt
 
-2. API Keys
+### 2. API Keys
 
     Quotes API: Get a URL endpoint for fetching motivational quotes.
     Unsplash API: Sign up at Unsplash Developers to get an access key for fetching images.
 
-3. Instagram Credentials
+### 3. Instagram Credentials
 
     Ensure you have a valid Instagram account.
     Enable "Allow login from third-party apps" in Instagram settings if applicable.
 
-Configuration
+## Configuration
 
 Update the config.py file with the following:
 
-# Quotes API Endpoint
+## Quotes API Endpoint
 QUOTES_API_URL  = "<your_quotes_api_url>"
 
-# Unsplash API
+## Unsplash API
 UNSPLASH_API_URL = "https://api.unsplash.com/photos/random"
 UNSPLASH_ACCESS_KEY = "<your_unsplash_access_key>"
 
-# Instagram Credentials
+## Instagram Credentials
 INSTAGRAM_USERNAME = "<your_instagram_username>"
 INSTAGRAM_PASSWORD = "<your_instagram_password>"
-## How It Works
+---
+### How It Works
 
 ### Workflow
 
@@ -60,20 +61,14 @@ INSTAGRAM_PASSWORD = "<your_instagram_password>"
 3. Overlays the quote on the image.
 4. Posts the final image to Instagram.
 
-### File Structure
-
-project-directory/ ├── bot.py # Main script for bot logic ├── config.py # Configuration file ├── images/ # Directory for saving generated images └── requirements.txt # Python dependencies
-
-
 ### Running the Bot
 
 Run the script:
 
-
 python bot.py
 
-Extending the Functionality
-Scheduling Posts
+### Extending the Functionality
+#Scheduling Posts
 
 Add scheduling logic to post multiple times per day using apscheduler. Example:
 
@@ -85,19 +80,19 @@ scheduler.add_job(main, 'cron', hour=14, minute=0)
 scheduler.add_job(main, 'cron', hour=20, minute=0)
 scheduler.start()
 
-Custom Fonts
-
+### Custom Fonts
 Replace arial.ttf in the script with the path to your desired font.
-Error Handling
 
+### Error Handling
 Ensure robust error handling for API requests and Instagram login failures.
-License
 
+### License
 This project is licensed under the MIT License. Feel free to use and modify it as needed.
 Contribution
 
 Feel free to open an issue or submit a pull request if you would like to contribute or suggest improvements.
-Acknowledgments
+
+### Acknowledgments
 
     Unsplash: For the high-quality free images.
     Quotes API: For the motivational quotes.
